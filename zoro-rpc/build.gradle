@@ -13,3 +13,9 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile group: 'io.netty', name: 'netty-all', version: '4.0.32.Final'
 }
+
+task run(type: JavaExec, dependsOn: 'classes') {
+    description '运行指定main函数的java'
+    classpath = sourceSets.main.runtimeClasspath
+    main = "com.ivanwang.zoro.rpc.Test"
+}

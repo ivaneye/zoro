@@ -1,0 +1,4 @@
+rootProject.name = 'zoro'
+
+include 'zoro-rpc'
+
